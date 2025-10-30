@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Особиста сторінка Івана Крамського">
+    <meta name="keywords" content="Іван Крамськой, студент, СумДУ, веброзробник">
+    <meta name="author" content="Іван Крамськой">
+    <title>Іван Крамськой | Студент СумДУ | Веброзробник</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Перейти до основного контенту</a>
+
+    <header role="banner">
+        <div class="header-content">
+            <img src="image.jpg" 
+                 alt="Іван Крамськой" 
+                 class="profile-image"
+                 fetchpriority="high"
+                 width="150" 
+                 height="150">
+            <div class="header-text">
+                <div class="header-title">
+                    <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExeXN0aTFpbmFrcWc2NXJuNTBoajhoNGJnYms1YW9hYmVkbWIyd2JabeiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/sHTY3MSoN10elz6Yxe/giphy.gif" 
+                    alt="potuzhno" 
+                    class="header-gif">
+                    <h1>Іван Крамськой</h1>
+                </div>
+                <span class="subtitle">Студент групи ІН-31.2, СумДУ</span>
+            </div>
+        </div>
+    </header>
+    
+    <nav role="navigation" aria-label="Основна навігація">
+        <div class="nav-container">
+            <ul class="nav-menu" role="menubar">
+                <li class="nav-item" role="none">
+                    <a href="#about" class="nav-link" role="menuitem">Про мене</a>
+                </li>
+                <li class="nav-item" role="none">
+                    <a href="#hobbies" class="nav-link" role="menuitem">Мої хобі</a>
+                </li>
+                <li class="nav-item" role="none">
+                    <a href="#contacts" class="nav-link" role="menuitem">Контакти</a>
+                </li>
+                <li class="nav-item" role="none">
+                    <a href="#" class="nav-link auth-trigger" role="menuitem" data-form="login">Авторизація</a>
+                    <div id="login-form" class="dropdown-form">
+                        <button class="close-form">&times;</button>
+                        <h3 class="form-title">Авторизація</h3>
+                        <form id="loginForm" method="post">
+                            <div class="form-group">
+                                <label for="login-email" class="form-label">Електронна пошта:</label>
+                                <input type="email" id="login-email" name="email" class="form-input" required placeholder="Введіть вашу електронну пошту">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="login-password" class="form-label">Пароль:</label>
+                                <input type="password" id="login-password" name="password" class="form-input" required placeholder="Введіть ваш пароль">
+                            </div>
+                            
+                            <div class="form-group">
+                                <div class="form-option">
+                                    <input type="checkbox" id="remember-me" name="remember" class="form-checkbox">
+                                    <label for="remember-me">Запам'ятати мене</label>
+                                </div>
+                            </div>
+                            
+                            <div class="form-buttons">
+                                <button type="submit" class="btn btn-primary">Увійти</button>
+                                <button type="reset" class="btn btn-secondary">Очистити</button>
+                            </div>
+                            
+                            <div id="login-message" class="form-message"></div>
+                            
+                            <a href="#" class="form-link switch-form" data-from="login" data-to="register">Ще не маєте акаунту? Зареєструватися</a>
+                        </form>
+                    </div>
+                </li>
+                <li class="nav-item" role="none">
+                    <a href="#" class="nav-link auth-trigger" role="menuitem" data-form="register">Реєстрація</a>
+                    <div id="register-form" class="dropdown-form">
+                        <button class="close-form">&times;</button>
+                        <h3 class="form-title">Реєстрація</h3>
+                        <form id="registerForm" method="post">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="register-name" class="form-label">Ім'я та прізвище:</label>
+                                    <input type="text" id="register-name" name="name" class="form-input" required 
+                                        placeholder="Введіть ваше ім'я та прізвище">
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="register-email" class="form-label">Електронна пошта:</label>
+                                    <input type="email" id="register-email" name="email" class="form-input" required 
+                                        placeholder="Введіть вашу електронну пошту">
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="register-password" class="form-label">Пароль:</label>
+                                    <input type="password" id="register-password" name="password" class="form-input" required 
+                                        placeholder="Введіть пароль">
+                                </div>
+                                <div class="form-group">
+                                    <label for="register-confirm-password" class="form-label">Підтвердження пароля:</label>
+                                    <input type="password" id="register-confirm-password" name="confirm-password" class="form-input" required 
+                                        placeholder="Повторіть пароль">
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="register-birthdate" class="form-label">Дата народження:</label>
+                                    <input type="date" id="register-birthdate" name="birthdate" class="form-input" required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Стать:</label>
+                                    <div class="form-options">
+                                        <div class="form-option">
+                                            <input type="radio" id="gender-male" name="gender" value="male" class="form-radio" checked>
+                                            <label for="gender-male">Чоловіча</label>
+                                        </div>
+                                        <div class="form-option">
+                                            <input type="radio" id="gender-female" name="gender" value="female" class="form-radio">
+                                            <label for="gender-female">Жіноча</label>
+                                        </div>
+                                        <div class="form-option">
+                                            <input type="radio" id="gender-other" name="gender" value="other" class="form-radio">
+                                            <label for="gender-other">Інше</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="register-country" class="form-label">Країна:</label>
+                                    <select id="register-country" name="country" class="form-input" required>
+                                        <option value="" disabled selected>Оберіть країну</option>
+                                        <option value="ua">Україна</option>
+                                        <option value="pl">Польща</option>
+                                        <option value="de">Німеччина</option>
+                                        <option value="fr">Франція</option>
+                                        <option value="other">Інша</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group full-width">
+                                    <label for="register-bio" class="form-label">Про мене:</label>
+                                    <textarea id="register-bio" name="bio" class="form-input form-textarea" 
+                                            placeholder="Розкажіть коротко про себе..."></textarea>
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group full-width">
+                                    <div class="form-option">
+                                        <input type="checkbox" id="terms" name="terms" class="form-checkbox" required>
+                                        <label for="terms">Я погоджуюсь з умовами використання</label>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group full-width">
+                                    <div class="form-option">
+                                        <input type="checkbox" id="newsletter" name="newsletter" class="form-checkbox" checked>
+                                        <label for="newsletter">Підписатися на розсилку новин</label>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-buttons">
+                                <button type="submit" class="btn btn-primary">Зареєструватися</button>
+                                <button type="reset" class="btn btn-secondary">Очистити</button>
+                            </div>
+                            
+                            <div id="register-message" class="form-message"></div>
+                            
+                            <a href="#" class="form-link switch-form" data-from="register" data-to="login">Вже маєте акаунт? Увійти</a>
+                        </form>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main id="main-content" role="main">
+        <div class="content-primary">
+            <article id="about" class="card" aria-labelledby="about-heading">
+                <h2 id="about-heading">Про мене</h2>
+                <p><strong>Іван Крамськой</strong>, мені 19 років. Я навчаюся на третьому курсі в <strong>СумДУ</strong> за спеціальністю "Інформатика".</p>
+                
+                <h3>Моя освіта</h3>
+                <p>З самих не запам'ятних часів мене цікавило все що можна під'єднати до розетки, що й привело мене до вибору професії у сфері IT. Навчання в університеті дає мені можливість поглибити знання у девелопменті в цілому.</p>
+                
+                <h3>Мої цілі</h3>
+                <p>У майбутньому я планую розвиватися як <strong>веб-розробник</strong>, вивчати нові мови програмування та намагатися створити корисні продукти. З особливим трепетом у серці мене цікавить фронтенд.</p>
+            </article>
+
+            <section id="hobbies" class="card" aria-labelledby="hobbies-heading">
+                <h2 id="hobbies-heading">Мої хобі</h2>
+                <p>У вільний час я займаюся різноманітними захопленнями, які допомагають мені розвиватися та відпочивати.</p>
+                
+                <div class="hobby-grid">
+                    <div class="hobby-card">
+                        <h3>Малювання</h3>
+                        <img src="12121212.png" 
+                             alt="падік" 
+                             class="hobby-image" 
+                             loading="lazy"
+                             width="300"
+                             height="200">
+                        <p>З самого дитинства єдине, що вдалося моїй сім'ї,- це привити до мене бажання малювати. Також займаюся "Діджитал артом". Особливо полюбляю роботу з олівцем (Мабуть єдине що вмію).</p>
+                    </div>
+                    
+                    <div class="hobby-card">
+                        <h3>Музика</h3>
+                        <img src="121.png" 
+                             alt="бринь" 
+                             class="hobby-image" 
+                             loading="lazy"
+                             width="300"
+                             height="200">
+                        <p>Усе життя хотів себе асоціювати з Музикою, тому у майже врозумілому віці узяв до рук басс гітару, грав у колективах, аж до поки не отримав свою ріднесеньку Ф310.</p>
+                    </div>
+                    
+                    <div class="hobby-card">
+                        <h3>Копання з технікою</h3>
+                        <img src="photo_2025-04-14_23-57-20.jpg" 
+                             alt="хондо" 
+                             class="hobby-image" 
+                             loading="lazy"
+                             width="300"
+                             height="200">
+                        <p>Маю свій мотоцикл,- Honda XRL125R 1998 року народження, можна сказати, що весь мій інтерес до техніки пішов від батька, я все життя проводжу з якимося залязяками.</p>
+                    </div>
+
+                    <div class="hobby-card">
+                        <h3>"Відеоблогінг"</h3>
+                        <img src="photo_2025-04-16_18-08-03.jpg" 
+                             alt="ютубчік" 
+                             class="hobby-image" 
+                             loading="lazy"
+                             width="300"
+                             height="200">
+                        <p>Надихнувшися каналом Американського ютубера, який постійно крутить гайки, теж захотів спробувати себе у цій ролі, але не довго пісенька грала, клята війна залишила мене фактично без дому. Але відео все ж таки є - <strong><a href="https://www.youtube.com/watch?v=PFOl3akTXSM&list=LL&index=8" target="_blank" rel="noopener noreferrer">тиць</a></strong></p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <aside role="complementary">
+            <div class="card">
+                <h2>Цікаві факти</h2>
+                <blockquote>
+                    "К чортам війну! Робіть любов, деб*ли!" — з п'єси "Павлік Морозов"
+                </blockquote>
+                
+                <h3>Мої улюблені Музичні виконавці</h3>
+                <ul class="artists-list">
+                    <li>
+                        <a href="https://open.spotify.com/artist/4tZwfgrHOc3mvqYlEYSvVi?si=b7tL9TY8T6mxtmD91IGeBQ" class="music-link" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-spotify"></i> Daft Punk
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://open.spotify.com/artist/36QJpDe2go2KgaRleHCDTp?si=8a8c0c8c5c5c4c4c" class="music-link" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-spotify"></i> Led Zeppelin
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://open.spotify.com/artist/6ZLTlhejhndI4Rh53vYhrY?si=7a7b7c7d7e7f7g7h" class="music-link" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-spotify"></i> Ozzy Osbourne
+                        </a>
+                    </li>
+                </ul>
+                
+                <h3>Мої соціальні мережі</h3>
+                <div class="social-links">
+                    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+                    <div class="social-buttons">
+                        <a href="https://github.com/merqaaa" class="social-btn github" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-github"></i>
+                            GitHub
+                        </a>
+                        
+                        <a href="https://t.me/retrograddemercury" class="social-btn telegram" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-telegram"></i>
+                            Telegram
+                        </a>
+                        
+                        <a href="https://www.instagram.com/retrograddemercury/" class="social-btn instagram" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-instagram"></i>
+                            Instagram
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </main>
+
+    <footer role="contentinfo">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Контакти</h3>
+                <section id="contacts" aria-labelledby="contacts-heading"></section>
+                <div class="contact-info">
+                    <a href="mailto:kramskoy.van@gmail.com" class="contact-link">
+                        kramskoy.van@gmail.com
+                    </a>
+                    <a href="tel:+380XXXXXXXXX" class="contact-link">
+                        +38 (097) 061-11-22
+                    </a>
+                    <address>
+                        Сумський державний університет<br>
+                        Група ІН-31.2
+                    </address>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Іван Крамськой. Всі права захищені.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
